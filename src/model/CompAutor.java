@@ -5,7 +5,7 @@
  * @version v1.2023
  * @since 3-2023
  * 
- * <p>Esta clase Chirigota, se encarga de los compositores y autores las agrupaciones</p>
+ * <p>Esta clase CompAutor, se encarga de los compositores y autores las agrupaciones</p>
  *
  */
 
