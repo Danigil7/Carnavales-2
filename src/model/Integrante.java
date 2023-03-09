@@ -9,6 +9,9 @@ public class Integrante {
 	private Integer edad;
 	private String localidad;
 
+	/**
+	 * Constructor sin parametros
+	 */
 	public Integrante() {
 		setNombre("");
 		setEdad(18);
@@ -16,6 +19,12 @@ public class Integrante {
 		this.numParticipante = Integrante.codigoParticipante();
 	}
 
+	/**
+	 * Constructor con parametros
+	 * @param nombre
+	 * @param edad
+	 * @param localidad
+	 */
 	public Integrante(String nombre, Integer edad, String localidad) {
 		setNombre(nombre);
 		setEdad(edad);
@@ -23,6 +32,10 @@ public class Integrante {
 		this.numParticipante = Integrante.codigoParticipante();
 	}
 
+	/**
+	 * Getters and Setters
+	 * @return numParticipante
+	 */
 	public Integer getNumParticipante() {
 		return numParticipante;
 	}
@@ -58,6 +71,9 @@ public class Integrante {
 		this.localidad = localidad;
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String toString() {
 		return "Integrante [getNumParticipante()=" + getNumParticipante() + ", getNombre()=" + getNombre()
