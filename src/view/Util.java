@@ -1,3 +1,14 @@
+
+/**
+ * 
+ * @author danigil
+ * @version v1.2023
+ * @since 3-2023
+ * 
+ * <p>Esta clase Util, se encarga de metodos para facilitar el uso de leer variables o escribirlas</p>
+ *
+ */
+
 package view;
 
 import java.util.Scanner;
