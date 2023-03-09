@@ -1,5 +1,13 @@
 
-
+/**
+ * 
+ * @author danigil
+ * @version v1.2023
+ * @since 3-3-2023
+ * 
+ * <p>Esta clase Coac, Concurso Oficial de Agrupaciones Carnavalescas</p>
+ *
+ */
 
 package controller;
 
@@ -34,8 +42,14 @@ public class Coac {
 	public Coac() {
 		super();
 	}
-	
 
+/**
+ * Getters and setters
+ */
+/**
+ * 
+ * @return agrupa
+ */
 	public AgrupacionOficial[] getAgrupa() {
 		return agrupa;
 	}
@@ -43,7 +57,10 @@ public class Coac {
 	public void setAgrupa(AgrupacionOficial[] agrupa) {
 		this.agrupa = agrupa;
 	}
-
+/**
+ * 
+ * @return agrupaciones
+ */
 	public Agrupaciones[] getAgrupaciones() {
 		return agrupaciones;
 	}
@@ -51,7 +68,10 @@ public class Coac {
 	public void setAgrupaciones(Agrupaciones[] agrupaciones) {
 		this.agrupaciones = agrupaciones;
 	}
-
+/**
+ * 
+ * @return integrante
+ */
 	public Integrante[] getIntegrante() {
 		return integrante;
 	}
@@ -59,7 +79,10 @@ public class Coac {
 	public void setIntegrante(Integrante[] integrante) {
 		this.integrante = integrante;
 	}
-
+/**
+ * 
+ * @return contAgrupaciones
+ */
 	public int getContAgrupaciones() {
 		return contAgrupaciones;
 	}
@@ -68,6 +91,12 @@ public class Coac {
 		this.contAgrupaciones = contAgrupaciones;
 	}
 
+	/**
+	 * El siguiente metodo intenta inscribir una agrupación oficial en una lista de agrupaciones. Recibe como parámetro un objeto de tipo AgrupacionOficial y devuelve un valor booleano que indica
+	 * si la operación de inscripción fue exitosa o no. El método utiliza un bucle for para recorrer AgrupacionOficial que es llamado agrupa
+	 * @param agrupacion
+	 * @return boolean
+	 */
 	public boolean inscribir_agrupacion(AgrupacionOficial agrupacion) {
 		boolean inscrito = false;
 		for (int i = 0; i < agrupa.length; i++) {
@@ -82,24 +111,6 @@ public class Coac {
 		}
 
 		return inscrito;
-
-	}
-
-	public boolean desinscribir_agrupacion(AgrupacionOficial agrupacion) {
-
-		boolean desinc = false;
-		for (int i = 0; i < agrupa.length; i++) {
-			if (agrupa[i] != null) {
-				agrupa[i] = null;
-				contAgrupaciones--;
-				desinc = true;
-				break;
-			} else {
-				desinc = false;
-			}
-		}
-
-		return desinc;
 
 	}
 
@@ -129,21 +140,40 @@ public class Coac {
 		System.out.println(contAgrupaciones);
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Coac [toString()=" + super.toString() + "]";
 	}
 
+	/**
+	 * 
+	 * @return AgrupacionOficial
+	 */
 	public AgrupacionOficial[] verAgrupacion() {
 		return agrupa;
 
 	}
 
+	/**
+	 * 
+	 * @return Integrante
+	 */
 	public Integrante[] verIntegrante() {
 		return integrante;
 
 	}
 
+	/**
+	 * El método utiliza un bucle for para recorrer un arreglo de Agrupaciones llamado agrupaciones. Si encuentra una posición nula en el arreglo, asigna el objeto de agrupación a esa posición, incrementa 
+	 * el contador de agrupaciones y establece la variable add en true para indicar que la operación fue exitosa. Si no encuentra una posición nula en el arreglo, la variable add se mantiene 
+	 * en false para indicar que la operación no fue exitosa
+	 * @param agrupacion
+	 * @return boolean
+	 */
 	public boolean add_agrupacion(Agrupaciones agrupacion) {
 		boolean add = false;
 		for (int i = 0; i < agrupa.length; i++) {
@@ -161,6 +191,11 @@ public class Coac {
 
 	}
 
+	/**
+	 * Este metodo elimina la agrupacion, Recibe como parametro un entero que es pos y devuelve un boolean que indica si fue eliminado o no.
+	 * @param pos
+	 * @return boolean
+	 */
 	public boolean eliminar_agrupacion(int pos) {
 		boolean eliminar = false;
 			if (pos < agrupaciones.length && agrupaciones[pos] != null) {
@@ -172,11 +207,19 @@ public class Coac {
 		return eliminar;
 	}
 	
+	/**
+	 * 
+	 * @param pos
+	 * @return Agrupaciones
+	 */
 	public Agrupaciones getAgrupacion(int pos) {
 		return agrupaciones[pos];
 	}
 	
 
+	/**
+	 * Este metodo inserta valoras al array Integrante
+	 */
 	public void precargarDatosParaPruebas() {
 		Integrante[] integ = new Integrante[9];
 		integ[0] = new Integrante( "Juan", 32, "El Puerto");
@@ -221,77 +264,4 @@ public class Coac {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-//		
-//	Integrante[] integ = new Integrante[9];
-//	integ[0] = new Integrante(22, "Juan", 32, "El Puerto");
-//	integ[1] = new Integrante(20, "Roberto", 35, "San Juan");
-//	integ[2] = new Integrante(20, "Andrés", 28, "Las Cabezas");
-//	integ[3] = new Integrante(20, "Julia", 42, "Lebrija");
-//	integ[4] = new Integrante(20, "Ana", 29, "El Cuervo");
-//	integ[5] = new Integrante(20, "Pepe", 46, "San Juan");
-//	integ[6] = new Integrante(20, "Jimena", 40, "Utrera");
-//	integ[7] = new Integrante(20, "Manuel", 39, "Ronda");
-//	integ[8] = new Integrante(20, "Carlota", 37, "El Puerto");
-//		return integ;
-//	
-//	
-//	
-//	Chirigota ch1 = new Chirigota("La de allí", "Manuel", "Carlos", "Antonio", "Caballos", 8, 72, integ );
-//	Coro c1 = new Coro("Coreando", "Julia", "Jimena", "Andrés", "Juguetes",3,2, 70, integ );
-//	Comparsa co1 = new Comparsa("Vuelta y Vuelta", "Manuel", "Ana", "Antonio", "Indios y vaqueros","La Casita", 72, integ);
-//	Cuarteto cu1 = new Cuarteto("Casa Paco", "Ana", "Pepe", "Roberto", "Paraguas", 4, 65, integ );
-//	Romancero ro1 = new Romancero("La bien paga", "Roberto", "Julia", "Juan", "Epoca","El romance medieval");
-//	Chirigota ch2 = new Chirigota("La Abuela", "Alvaro", "Carlota", "Maria", "Perros", 3, 75, integ );
-//	Chirigota ch3 = new Chirigota("Comeremos", "Juan", "Alejandro", "Pepe", "Sirenas", 6, 68, integ );
-//	Comparsa co2 = new Comparsa("Media Hora", "Alvaro", "Julia", "Andrés", "Princesas","Media Luna", 76, integ );
-//	Coro c2 = new Coro("Controlarse", "Pedro", "Marina", "Juan", "Rastafari",4,3, 82, integ );
-//	Cuarteto cu2 = new Cuarteto("Envuelvelo", "Juan", "Andrés", "Julia", "Bebé Gigante", 4, 69, integ );
 }
