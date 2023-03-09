@@ -1,4 +1,14 @@
 
+/**
+ * 
+ * @author danigil
+ * @version v1.2023
+ * @since 3-2023
+ * 
+ * <p>Esta clase Coro, se encarga de la especialidad de agrupaciones, coros</p>
+ *
+ */
+
 package model;
 
 public class Coro extends AgrupacionOficial {
@@ -7,6 +17,9 @@ public class Coro extends AgrupacionOficial {
 	private Integer numGuitarras;
 
 
+	/**
+	 * Metodo constructor de la clase sin parametros
+	 */
 	public Coro() {
 		super();
 		setNumBandurrias(0);
@@ -14,6 +27,9 @@ public class Coro extends AgrupacionOficial {
 
 	}
 
+	/**
+	 * Metodo constructor de la clase con parametros
+	 */
 	public Coro(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz,
 			Integer numBandurrias, Integer numGuitarras, Integer puntos, Integrante[] integrante) {
 		super(nombre, autor, autorMusica, autorLetra, tipoDisfraz, integrante);
@@ -22,6 +38,11 @@ public class Coro extends AgrupacionOficial {
 		setPuntos(puntos);
 	}
 
+	/**
+	 * Getters and Setters
+	 * @return numBandurrias
+	 */
+	
 	public Integer getNumBandurrias() {
 		return numBandurrias;
 	}
@@ -39,7 +60,9 @@ public class Coro extends AgrupacionOficial {
 	}
 
 	
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String toString() {
 		return "------------------- \n Coro \n------------------- \nNumBandurrias()=" + getNumBandurrias() + ", \nNumGuitarras()=" + getNumGuitarras()
@@ -48,18 +71,27 @@ public class Coro extends AgrupacionOficial {
 				+ ",  \nTipoDisfraz()=" + getTipoDisfraz() + "]";
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String cantarPresentacion() {
 		String cadena;
 		return cadena = "Cantando la presentación del Coro " + super.getNombre();
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String hacerTipo() {
 		String cadena;
 		return cadena = "El Coro " + super.getNombre() + " va de " + super.getTipoDisfraz();
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String caminitoDelFalla() {
 		String cadena;
@@ -67,6 +99,9 @@ public class Coro extends AgrupacionOficial {
 
 	}
 
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public int compareTo(Agrupaciones o) {
 		int comp;
@@ -75,11 +110,5 @@ public class Coro extends AgrupacionOficial {
 		
 	}
 
-	
-
-	
-
-	
-	
 
 }
