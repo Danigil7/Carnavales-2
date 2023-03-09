@@ -1,3 +1,14 @@
+
+/**
+ * 
+ * @author danigil
+ * @version v1.2023
+ * @since 3-2023
+ * 
+ * <p>Esta clase Principal, se encarga la vista que tiene el usuario al ejecutar el programa</p>
+ *
+ */
+
 package view;
 
 import model.Integrante;
