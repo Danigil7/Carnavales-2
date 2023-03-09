@@ -218,7 +218,7 @@ public class Coac {
 	
 
 	/**
-	 * Este metodo inserta valoras al array Integrante
+	 * Este metodo inserta valores al array Integrante
 	 */
 	public void precargarDatosParaPruebas() {
 		Integrante[] integ = new Integrante[9];
