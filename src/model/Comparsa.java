@@ -5,7 +5,7 @@
  * @version v1.2023
  * @since 3-2023
  * 
- * <p>Esta clase Chirigota, se encarga de la especialidad de agrupaciones, Comparsas</p>
+ * <p>Esta clase Comparsa, se encarga de la especialidad de agrupaciones, Comparsas</p>
  *
  */
 
