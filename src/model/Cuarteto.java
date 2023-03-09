@@ -1,19 +1,40 @@
 
+/**
+ * 
+ * @author danigil
+ * @version v1.2023
+ * @since 3-2023
+ * 
+ * <p>Esta clase Cuartero, se encarga de la especialidad de agrupaciones, Cuartetos</p>
+ *
+ */
+
 package model;
 
 public class Cuarteto extends AgrupacionOficial implements Callejera{
 	
 	private Integer numMiembros;
 
-	
+	/**
+	 * Metodo constructor de la clase sin parametros
+	 */
 	public Cuarteto() {
 		super();
 		setNumMiembros(0);
 		
 	}
 	
-	
-	
+	/**
+	 * Metodo constructor de la clase con parametros
+	 * @param nombre
+	 * @param autor
+	 * @param autorMusica
+	 * @param autorLetra
+	 * @param tipoDisfraz
+	 * @param numMiembros
+	 * @param puntos
+	 * @param integrante
+	 */
 	public Cuarteto(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz,Integer numMiembros, Integer puntos, Integrante[] integrante) {
 		super(nombre, autor, autorMusica, autorLetra, tipoDisfraz, integrante);
 		setNumMiembros(numMiembros);
@@ -21,7 +42,10 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	}
 	
 	
-	
+	/**
+	 * Getters and Setters
+	 * @return numMiembros
+	 */
 	
 	public Integer getNumMiembros() {
 		return numMiembros;
@@ -32,7 +56,9 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	
 
 
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String toString() {
 		return "------------------- \n Coro \n------------------- \nNumMiembros()=" + getNumMiembros() + ", \nPuntos()=" + getPuntos() + ", \nNombre()="
@@ -41,13 +67,17 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	}
 
 
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String cantarPresentacion() {
 		String cadena;
 		return cadena = "Cantando la presentación del Cuarteto " + super.getNombre();
 	}
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String hacerTipo() {
 		String cadena;
@@ -56,7 +86,9 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	}
 
 
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String caminitoDelFalla() {
 		String cadena;
@@ -65,7 +97,9 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	}
 
 
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public String amoAEscucha() {
 		String cadena;
@@ -75,7 +109,9 @@ public class Cuarteto extends AgrupacionOficial implements Callejera{
 	}
 
 
-
+	/**
+	 * Este metodo sobreescribe el toString() de la clase padre. Devuelve una cadena de caracteres 
+	 */
 	@Override
 	public int compareTo(Agrupaciones o) {
 		int comp;

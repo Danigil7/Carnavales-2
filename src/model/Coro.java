@@ -29,6 +29,15 @@ public class Coro extends AgrupacionOficial {
 
 	/**
 	 * Metodo constructor de la clase con parametros
+	 * @param nombre
+	 * @param autor
+	 * @param autorMusica
+	 * @param autorLetra
+	 * @param tipoDisfraz
+	 * @param numBandurrias
+	 * @param numGuitarras
+	 * @param puntos
+	 * @param integrante
 	 */
 	public Coro(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz,
 			Integer numBandurrias, Integer numGuitarras, Integer puntos, Integrante[] integrante) {
